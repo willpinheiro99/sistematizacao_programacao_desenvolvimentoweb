@@ -2,9 +2,9 @@
 
 Projeto de Sistematização da disciplina de Programação e Desenvolvimento Web.
 
-A Nit Med é uma aplicação web desenvolvida para uma clínica de saúde fictícia, composta por uma landing page responsiva e uma API para consulta de profissionais, especialidades e disponibilidade de atendimento.
+A **Nit Med** é uma aplicação web desenvolvida para uma clínica de saúde fictícia, composta por uma landing page responsiva e uma API para consulta de profissionais, especialidades e disponibilidade de atendimento.
 
-O projeto integra os requisitos do Projeto 01 e do Projeto 02 da atividade de Sistematização, utilizando tecnologias modernas de desenvolvimento web, mas mantendo uma estrutura simples, organizada e fácil de executar.
+O projeto integra os requisitos do **Projeto 01 — Landing Page Estática** e do **Projeto 02 — API de Profissionais de Saúde**, utilizando tecnologias modernas de desenvolvimento web, mas mantendo uma estrutura simples, organizada e fácil de executar e explicar.
 
 ---
 
@@ -35,7 +35,7 @@ Os requisitos contemplados são:
 - imagens relacionadas aos serviços;
 - descrição dos serviços;
 - equipe fictícia com pelo menos 3 profissionais;
-- foto e cargo/especialidade dos profissionais;
+- foto e cargo ou especialidade dos profissionais;
 - utilização de diferentes níveis de cabeçalho;
 - formulário estático contendo:
   - Nome;
@@ -58,6 +58,16 @@ A API contempla:
 - busca por nome;
 - filtro por especialidade;
 - consulta da disponibilidade dos profissionais.
+
+---
+
+## Aviso sobre os dados apresentados
+
+Todos os profissionais, nomes, registros profissionais, especialidades, disponibilidades, descrições e demais informações exibidas na Nit Med são **fictícios** e foram criados exclusivamente para fins acadêmicos e demonstrativos.
+
+As imagens utilizadas para representar os profissionais também possuem caráter **meramente ilustrativo** e não estabelecem qualquer relação entre as pessoas retratadas e os nomes, cargos ou informações apresentados no projeto.
+
+A Nit Med não representa uma clínica real e não deve ser utilizada como fonte de informações médicas ou para agendamento de serviços de saúde.
 
 ---
 
@@ -90,10 +100,10 @@ A API contempla:
 ## Funcionalidades
 
 - Landing page responsiva
-- Layout Mobile First
+- Desenvolvimento com abordagem Mobile First
 - Navegação por seções
 - Apresentação dos serviços da clínica
-- Equipe médica carregada dinamicamente
+- Equipe médica carregada dinamicamente pela API
 - Busca de profissionais por nome
 - Filtro por especialidade
 - Visualização da disponibilidade
@@ -106,7 +116,7 @@ A API contempla:
 ## Estrutura do projeto
 
 ```text
-nit-med/
+sistematizacao_programacao_desenvolvimentoweb/
 │
 ├── frontend/
 │   └── src/
@@ -114,6 +124,7 @@ nit-med/
 │       ├── api.ts
 │       ├── types.ts
 │       ├── App.tsx
+│       ├── index.css
 │       └── main.tsx
 │
 ├── backend/
