@@ -1,4 +1,3 @@
-import cors from 'cors'
 import express from 'express'
 import professionalsData from '../data/professionals.json' with { type: 'json' }
 
@@ -18,8 +17,6 @@ interface Professional {
 }
 
 const app = express()
-
-app.use(cors())
 
 const professionals = professionalsData as Professional[]
 
