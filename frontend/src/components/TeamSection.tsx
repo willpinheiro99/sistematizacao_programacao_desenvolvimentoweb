@@ -169,8 +169,8 @@ function TeamSection({ specialties }: TeamSectionProps) {
               </div>
             </div>
 
-            <div className="mt-6 overflow-x-auto pb-1">
-              <div className="flex min-w-max gap-3">
+            <div className="mt-6">
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:flex lg:flex-wrap">
                 {specialtyOptions.map((specialty) => {
                   const value = specialty === 'Todos' ? '' : specialty
                   const isActive = selectedSpecialty === value
@@ -184,10 +184,13 @@ function TeamSection({ specialties }: TeamSectionProps) {
                         cursor-pointer
                         rounded-full
                         border
-                        px-5 py-2.5
-                        text-xs font-semibold uppercase
-                        tracking-[0.16em]
+                        px-3 py-2.5
+                        text-[10px] font-semibold uppercase
+                        tracking-[0.12em]
                         transition-all duration-300
+                        sm:px-5
+                        sm:text-xs
+                        sm:tracking-[0.16em]
                         ${
                           isActive
                             ? 'border-[#D8BE86] bg-[#D8BE86] text-[#4A3428]'
@@ -227,20 +230,23 @@ function TeamSection({ specialties }: TeamSectionProps) {
                 )}
               </div>
             ) : (
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
                 {filteredProfessionals.map((professional) => (
                   <article
                     key={professional.id}
                     className="
                       group relative
-                      h-[520px]
+                      h-[390px]
                       overflow-hidden
-                      rounded-[2rem]
+                      rounded-[1.5rem]
                       bg-[#DCCEC1]
                       shadow-[0_18px_40px_rgba(0,0,0,0.16)]
                       transition-all duration-300
                       hover:-translate-y-2
                       hover:shadow-[0_26px_55px_rgba(0,0,0,0.24)]
+                      sm:h-[460px]
+                      sm:rounded-[2rem]
+                      md:h-[520px]
                     "
                   >
                     <img
@@ -260,15 +266,19 @@ function TeamSection({ specialties }: TeamSectionProps) {
 
                     <div
                       className="
-                        absolute left-4 top-4
+                        absolute left-2 top-2
                         rounded-full
                         border border-white/40
                         bg-white/20
-                        px-4 py-2
-                        text-[10px] font-semibold uppercase
-                        tracking-[0.20em]
+                        px-3 py-1.5
+                        text-[8px] font-semibold uppercase
+                        tracking-[0.14em]
                         text-white
                         backdrop-blur-md
+                        sm:left-4 sm:top-4
+                        sm:px-4 sm:py-2
+                        sm:text-[10px]
+                        sm:tracking-[0.20em]
                       "
                     >
                       {professional.especialidade}
@@ -276,37 +286,41 @@ function TeamSection({ specialties }: TeamSectionProps) {
 
                     <div
                       className="
-                        absolute inset-x-4 bottom-4
-                        rounded-[1.75rem]
+                        absolute inset-x-2 bottom-2
+                        rounded-[1.25rem]
                         border border-white/35
                         bg-white/18
-                        p-5
+                        p-3
                         text-[#1F1B18]
                         shadow-[0_10px_30px_rgba(0,0,0,0.10)]
                         backdrop-blur-xl
                         transition-all duration-300
                         group-hover:bg-white/25
+                        sm:inset-x-4
+                        sm:bottom-4
+                        sm:rounded-[1.75rem]
+                        sm:p-5
                       "
                     >
-                      <div className="flex items-start justify-between gap-4">
-                        <div>
-                          <h3 className="text-xl font-semibold text-[#1F1B18]">
+                      <div className="flex items-start justify-between gap-2 sm:gap-4">
+                        <div className="min-w-0">
+                          <h3 className="text-sm font-semibold leading-tight text-[#1F1B18] sm:text-xl">
                             {professional.nome}
                           </h3>
 
-                          <p className="mt-1 text-sm text-[#1F1B18]/60">
+                          <p className="mt-1 text-[10px] text-[#1F1B18]/60 sm:text-sm">
                             {professional.crm}
                           </p>
                         </div>
 
-                        <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#C6A86A]" />
+                        <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#C6A86A] sm:mt-2" />
                       </div>
 
-                      <p className="mt-4 text-sm leading-6 text-[#1F1B18]/80">
+                      <p className="mt-3 line-clamp-2 text-[11px] leading-4 text-[#1F1B18]/80 sm:mt-4 sm:line-clamp-none sm:text-sm sm:leading-6">
                         {professional.descricao}
                       </p>
 
-                      <div className="mt-4 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#4A3428]">
+                      <div className="mt-3 hidden items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#4A3428] sm:flex">
                         <span className="h-2 w-2 rounded-full bg-[#C6A86A]" />
                         cuidado premium
                       </div>
@@ -317,17 +331,21 @@ function TeamSection({ specialties }: TeamSectionProps) {
                           setSelectedProfessional(professional)
                         }
                         className="
-                          mt-5 w-full
+                          mt-3 w-full
                           cursor-pointer
                           rounded-full
                           bg-[#4A3428]
-                          px-5 py-3
-                          text-sm font-semibold text-white
+                          px-3 py-2.5
+                          text-[11px] font-semibold text-white
                           transition-all duration-300
                           hover:-translate-y-0.5
                           hover:bg-[#C6A86A]
                           hover:text-[#1F1B18]
                           hover:shadow-[0_10px_24px_rgba(198,168,106,0.25)]
+                          sm:mt-5
+                          sm:px-5
+                          sm:py-3
+                          sm:text-sm
                         "
                       >
                         Ver disponibilidade

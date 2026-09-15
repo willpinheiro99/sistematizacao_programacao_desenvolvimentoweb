@@ -48,6 +48,36 @@ const specialtyDescriptions: Record<string, string> = {
     'Avaliação, prevenção e tratamento de alterações e lesões do sistema musculoesquelético.',
 }
 
+const brazilianStates = [
+  'AC',
+  'AL',
+  'AP',
+  'AM',
+  'BA',
+  'CE',
+  'DF',
+  'ES',
+  'GO',
+  'MA',
+  'MT',
+  'MS',
+  'MG',
+  'PA',
+  'PB',
+  'PR',
+  'PE',
+  'PI',
+  'RJ',
+  'RN',
+  'RS',
+  'RO',
+  'RR',
+  'SC',
+  'SP',
+  'SE',
+  'TO',
+]
+
 function App() {
   const [specialties, setSpecialties] = useState<string[]>([])
   const [loadingSpecialties, setLoadingSpecialties] = useState(true)
@@ -236,72 +266,286 @@ function App() {
 
           <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#6B4C3B]/10 blur-3xl" />
 
-          <div className="relative mx-auto max-w-4xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#C6A86A]">
-              Contato
-            </span>
+          <div className="relative mx-auto max-w-6xl">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#C6A86A]">
+                Contato
+              </span>
 
-            <h2 className="mx-auto mt-4 max-w-2xl text-3xl font-semibold leading-tight text-[#1F1B18] md:text-5xl">
-              Cuidar da sua saúde começa com uma boa escolha.
-            </h2>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#1F1B18] md:text-5xl">
+                Cuidar da sua saúde começa com uma boa escolha.
+              </h2>
 
-            <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-[#8C857D]">
-              Entre em contato com a Nit Med para conhecer nossas
-              especialidades, profissionais e disponibilidades de atendimento.
-            </p>
+              <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-[#8C857D]">
+                Entre em contato com a Nit Med para conhecer nossas
+                especialidades, profissionais e disponibilidades de atendimento.
+              </p>
+            </div>
 
-            <div
-              className="
-                mx-auto mt-10 max-w-2xl
-                rounded-[1.75rem]
-                border border-white/35
-                bg-white/18
-                p-6
-                shadow-[0_10px_30px_rgba(0,0,0,0.10)]
-                backdrop-blur-xl
-                md:p-8
-              "
-            >
-              <div className="grid gap-6 text-left sm:grid-cols-3">
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.20em] text-[#A48245]">
-                    WhatsApp
-                  </p>
+            <div className="mt-12 grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+              <div
+                className="
+                  rounded-[1.75rem]
+                  border border-white/35
+                  bg-white/18
+                  p-6
+                  shadow-[0_10px_30px_rgba(0,0,0,0.10)]
+                  backdrop-blur-xl
+                  md:p-8
+                "
+              >
+                <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#A48245]">
+                  Fale com a Nit Med
+                </span>
 
-                  <p className="mt-2 text-sm font-medium text-[#4A3428]">
-                    (21) 99999-9999
-                  </p>
+                <h3 className="mt-4 text-2xl font-semibold text-[#1F1B18]">
+                  Estamos próximos de você.
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-[#8C857D]">
+                  Utilize nossos canais de contato ou preencha o formulário
+                  para conhecer melhor a experiência Nit Med.
+                </p>
+
+                <div className="mt-8 space-y-6">
+                  <div className="border-b border-[#C6A86A]/20 pb-5">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.20em] text-[#A48245]">
+                      WhatsApp
+                    </p>
+
+                    <p className="mt-2 text-sm font-medium text-[#4A3428]">
+                      (21) 99999-9999
+                    </p>
+                  </div>
+
+                  <div className="border-b border-[#C6A86A]/20 pb-5">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.20em] text-[#A48245]">
+                      E-mail
+                    </p>
+
+                    <p className="mt-2 text-sm font-medium text-[#4A3428]">
+                      contato@nitmed.com
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.20em] text-[#A48245]">
+                      Localização
+                    </p>
+
+                    <p className="mt-2 text-sm font-medium text-[#4A3428]">
+                      Niterói — RJ
+                    </p>
+                  </div>
                 </div>
 
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.20em] text-[#A48245]">
-                    E-mail
-                  </p>
+                <div className="mt-8 border-t border-[#C6A86A]/20 pt-6">
+                  <a
+                    href="https://wa.me/5521999999999"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+                      mx-auto flex w-fit
+                      cursor-pointer items-center justify-center gap-2
+                      rounded-full
+                      bg-[#4A3428]
+                      px-8 py-3.5
+                      text-sm font-semibold text-white
+                      transition-all duration-300
+                      hover:-translate-y-1
+                      hover:bg-[#C6A86A]
+                      hover:text-[#1F1B18]
+                      hover:shadow-[0_12px_30px_rgba(198,168,106,0.25)]
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-5 w-5"
+                      aria-hidden="true"
+                    >
+                      <path d="M19.05 4.94A9.87 9.87 0 0 0 12.03 2C6.55 2 2.1 6.45 2.1 11.93c0 1.75.46 3.46 1.33 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.78 1.22h.01c5.48 0 9.93-4.45 9.93-9.93a9.86 9.86 0 0 0-2.92-6.97ZM12.04 20.16h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.53 3.69-8.22 8.23-8.22 2.2 0 4.27.86 5.82 2.4a8.17 8.17 0 0 1 2.4 5.82c0 4.53-3.69 8.23-8.21 8.23Zm4.51-6.16c-.25-.12-1.47-.73-1.7-.81-.23-.09-.4-.12-.56.12-.17.24-.65.81-.8.98-.15.17-.29.18-.54.06-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.71-.15-.24-.02-.37.11-.49.11-.11.25-.29.37-.43.12-.15.17-.24.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.01 2.57.12.17 1.76 2.69 4.26 3.77.6.26 1.07.41 1.44.52.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.15-.48-.27Z" />
+                    </svg>
 
-                  <p className="mt-2 text-sm font-medium text-[#4A3428]">
-                    contato@nitmed.com
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.20em] text-[#A48245]">
-                    Localização
-                  </p>
-
-                  <p className="mt-2 text-sm font-medium text-[#4A3428]">
-                    Niterói — RJ
-                  </p>
+                    Entrar em contato
+                  </a>
                 </div>
               </div>
 
-              <div className="mt-8 border-t border-[#C6A86A]/20 pt-6">
-                <a
-                  href="mailto:contato@nitmed.com"
+              <form
+                onSubmit={(event) => event.preventDefault()}
+                className="
+                  rounded-[1.75rem]
+                  border border-white/35
+                  bg-white/18
+                  p-6
+                  shadow-[0_10px_30px_rgba(0,0,0,0.10)]
+                  backdrop-blur-xl
+                  md:p-8
+                "
+              >
+                <div>
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#A48245]">
+                    Deixe seus dados
+                  </span>
+
+                  <h3 className="mt-4 text-2xl font-semibold text-[#1F1B18]">
+                    Como podemos falar com você?
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-6 text-[#8C857D]">
+                    Preencha os campos abaixo para demonstrar o formulário de
+                    contato da Nit Med.
+                  </p>
+                </div>
+
+                <div className="mt-8 grid gap-5 sm:grid-cols-2">
+                  <div className="sm:col-span-2">
+                    <label
+                      htmlFor="nome"
+                      className="text-xs font-semibold text-[#4A3428]"
+                    >
+                      Nome
+                    </label>
+
+                    <input
+                      id="nome"
+                      name="nome"
+                      type="text"
+                      placeholder="Digite seu nome"
+                      required
+                      className="
+                        mt-2 w-full
+                        rounded-2xl
+                        border border-[#C6A86A]/25
+                        bg-white/55
+                        px-4 py-3.5
+                        text-sm text-[#1F1B18]
+                        outline-none
+                        transition-all duration-300
+                        placeholder:text-[#8C857D]/70
+                        focus:border-[#C6A86A]
+                        focus:bg-white/75
+                        focus:ring-2
+                        focus:ring-[#C6A86A]/15
+                      "
+                    />
+                  </div>
+
+                  <div className="sm:col-span-2">
+                    <label
+                      htmlFor="email"
+                      className="text-xs font-semibold text-[#4A3428]"
+                    >
+                      E-mail
+                    </label>
+
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="seuemail@exemplo.com"
+                      required
+                      className="
+                        mt-2 w-full
+                        rounded-2xl
+                        border border-[#C6A86A]/25
+                        bg-white/55
+                        px-4 py-3.5
+                        text-sm text-[#1F1B18]
+                        outline-none
+                        transition-all duration-300
+                        placeholder:text-[#8C857D]/70
+                        focus:border-[#C6A86A]
+                        focus:bg-white/75
+                        focus:ring-2
+                        focus:ring-[#C6A86A]/15
+                      "
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="cidade"
+                      className="text-xs font-semibold text-[#4A3428]"
+                    >
+                      Cidade
+                    </label>
+
+                    <input
+                      id="cidade"
+                      name="cidade"
+                      type="text"
+                      placeholder="Sua cidade"
+                      required
+                      className="
+                        mt-2 w-full
+                        rounded-2xl
+                        border border-[#C6A86A]/25
+                        bg-white/55
+                        px-4 py-3.5
+                        text-sm text-[#1F1B18]
+                        outline-none
+                        transition-all duration-300
+                        placeholder:text-[#8C857D]/70
+                        focus:border-[#C6A86A]
+                        focus:bg-white/75
+                        focus:ring-2
+                        focus:ring-[#C6A86A]/15
+                      "
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="estado"
+                      className="text-xs font-semibold text-[#4A3428]"
+                    >
+                      Estado
+                    </label>
+
+                    <select
+                      id="estado"
+                      name="estado"
+                      defaultValue=""
+                      required
+                      className="
+                        mt-2 w-full
+                        rounded-2xl
+                        border border-[#C6A86A]/25
+                        bg-white/55
+                        px-4 py-3.5
+                        text-sm text-[#1F1B18]
+                        outline-none
+                        transition-all duration-300
+                        focus:border-[#C6A86A]
+                        focus:bg-white/75
+                        focus:ring-2
+                        focus:ring-[#C6A86A]/15
+                      "
+                    >
+                      <option value="" disabled>
+                        Selecione
+                      </option>
+
+                      {brazilianStates.map((state) => (
+                        <option key={state} value={state}>
+                          {state}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
                   className="
-                    inline-flex cursor-pointer items-center justify-center
+                    mt-7 w-full
+                    cursor-pointer
                     rounded-full
                     bg-[#4A3428]
-                    px-8 py-3.5
+                    px-6 py-3.5
                     text-sm font-semibold text-white
                     transition-all duration-300
                     hover:-translate-y-1
@@ -310,12 +554,17 @@ function App() {
                     hover:shadow-[0_12px_30px_rgba(198,168,106,0.25)]
                   "
                 >
-                  Entrar em contato
-                </a>
-              </div>
+                  Enviar
+                </button>
+
+                <p className="mt-4 text-center text-xs leading-5 text-[#8C857D]">
+                  Formulário demonstrativo para fins acadêmicos. Nenhum dado é
+                  enviado ou armazenado.
+                </p>
+              </form>
             </div>
 
-            <div className="mt-6 flex items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8C857D]">
+            <div className="mt-8 flex items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8C857D]">
               <span className="h-2 w-2 rounded-full bg-[#C6A86A]" />
               cuidado premium
             </div>
