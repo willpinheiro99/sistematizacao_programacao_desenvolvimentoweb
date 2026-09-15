@@ -1,8 +1,7 @@
 import type { Professional } from './types'
 
-const API_URL = import.meta.env.DEV
-  ? 'http://localhost:3000'
-  : ''
+const API_URL =
+  import.meta.env.VITE_API_URL || 'http://localhost:3000'
 
 export async function getProfessionals(
   nome = '',
