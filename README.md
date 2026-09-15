@@ -1,73 +1,33 @@
 # Nit Med
 
-Projeto de Sistematização da disciplina de Programação e Desenvolvimento Web.
+Projeto desenvolvido para a disciplina de Programação e Desenvolvimento Web do CEUB.
 
-A **Nit Med** é uma aplicação web desenvolvida para uma clínica de saúde fictícia, composta por uma landing page responsiva e uma API para consulta de profissionais, especialidades e disponibilidade de atendimento.
+A proposta consiste em uma landing page responsiva para uma clínica de saúde fictícia, integrada a uma API REST própria para consulta de profissionais, especialidades e disponibilidade de atendimento.
 
-O projeto integra os requisitos do **Projeto 01 — Landing Page Estática** e do **Projeto 02 — API de Profissionais de Saúde**, utilizando tecnologias modernas de desenvolvimento web, mas mantendo uma estrutura simples, organizada e fácil de executar e explicar.
-
----
-
-## Objetivo
-
-O objetivo da Nit Med é apresentar uma clínica de saúde de forma clara, moderna e responsiva, além de disponibilizar uma área interativa para consulta da equipe médica.
-
-A aplicação permite:
-
-- visualizar os principais serviços da clínica;
-- conhecer os profissionais disponíveis;
-- pesquisar profissionais pelo nome;
-- filtrar profissionais por especialidade;
-- visualizar informações e disponibilidade de atendimento;
-- acessar um formulário estático de contato.
+O projeto foi desenvolvido com foco em organização, responsividade, boa experiência visual e integração entre frontend e backend.
 
 ---
 
-## Projetos contemplados
+## Desenvolvimento
 
-### Projeto 01 — Landing Page Estática
+Projeto desenvolvido individualmente por **William Pinheiro**, estudante de Análise e Desenvolvimento de Sistemas no CEUB, como parte da disciplina de Programação e Desenvolvimento Web.
 
-A landing page apresenta a clínica, seus serviços e sua equipe.
+---
 
-Os requisitos contemplados são:
+## Objetivo do projeto
 
-- título da página;
-- imagens relacionadas aos serviços;
-- descrição dos serviços;
-- equipe fictícia com pelo menos 3 profissionais;
-- foto e cargo ou especialidade dos profissionais;
-- utilização de diferentes níveis de cabeçalho;
-- formulário estático contendo:
-  - Nome;
-  - E-mail;
-  - Cidade;
-  - Estado;
-- layout responsivo.
+O Nit Med foi desenvolvido para atender aos requisitos da sistematização da disciplina, contemplando:
 
-O formulário é apenas demonstrativo e não realiza processamento ou envio de dados.
-
-### Projeto 02 — API de Profissionais de Saúde
-
-A aplicação também possui uma API responsável por fornecer os dados dos profissionais da clínica.
-
-A API contempla:
-
-- leitura de dados de arquivo JSON local;
-- listagem de profissionais;
-- listagem de especialidades;
-- busca por nome;
+- landing page responsiva;
+- apresentação de serviços;
+- apresentação de profissionais;
+- formulário de contato;
+- API REST própria;
+- busca de profissionais por nome;
 - filtro por especialidade;
-- consulta da disponibilidade dos profissionais.
-
----
-
-## Aviso sobre os dados apresentados
-
-Todos os profissionais, nomes, registros profissionais, especialidades, disponibilidades, descrições e demais informações exibidas na Nit Med são **fictícios** e foram criados exclusivamente para fins acadêmicos e demonstrativos.
-
-As imagens utilizadas para representar os profissionais também possuem caráter **meramente ilustrativo** e não estabelecem qualquer relação entre as pessoas retratadas e os nomes, cargos ou informações apresentados no projeto.
-
-A Nit Med não representa uma clínica real e não deve ser utilizada como fonte de informações médicas ou para agendamento de serviços de saúde.
+- consulta de disponibilidade;
+- integração entre frontend e backend;
+- publicação do código no GitHub.
 
 ---
 
@@ -77,8 +37,9 @@ A Nit Med não representa uma clínica real e não deve ser utilizada como fonte
 
 - React
 - TypeScript
-- Tailwind CSS
 - Vite
+- Tailwind CSS
+- Fetch API
 
 ### Backend
 
@@ -88,7 +49,7 @@ A Nit Med não representa uma clínica real e não deve ser utilizada como fonte
 
 ### Dados
 
-- JSON
+- JSON local
 
 ### Versionamento
 
@@ -97,45 +58,50 @@ A Nit Med não representa uma clínica real e não deve ser utilizada como fonte
 
 ---
 
-## Funcionalidades
-
-- Landing page responsiva
-- Desenvolvimento com abordagem Mobile First
-- Navegação por seções
-- Apresentação dos serviços da clínica
-- Equipe médica carregada dinamicamente pela API
-- Busca de profissionais por nome
-- Filtro por especialidade
-- Visualização da disponibilidade
-- Modal com informações do profissional
-- Formulário estático de contato
-- Integração entre frontend e API REST
-
----
-
 ## Estrutura do projeto
 
 ```text
 sistematizacao_programacao_desenvolvimentoweb/
 │
-├── frontend/
-│   └── src/
-│       ├── components/
-│       ├── api.ts
-│       ├── types.ts
-│       ├── App.tsx
-│       ├── index.css
-│       └── main.tsx
-│
 ├── backend/
 │   ├── data/
 │   │   └── professionals.json
 │   │
-│   └── src/
-│       └── server.ts
+│   ├── src/
+│   │   └── server.ts
+│   │
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── frontend/
+│   ├── public/
+│   │   └── images/
+│   │       ├── brand/
+│   │       ├── hero/
+│   │       ├── professionals/
+│   │       └── sections/
+│   │
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Header.tsx
+│   │   │   ├── Hero.tsx
+│   │   │   ├── ProfessionalModal.tsx
+│   │   │   └── TeamSection.tsx
+│   │   │
+│   │   ├── api.ts
+│   │   ├── App.tsx
+│   │   ├── index.css
+│   │   ├── main.tsx
+│   │   └── types.ts
+│   │
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.ts
 │
 ├── docs/
 │   └── eap.md
 │
-├── README.md
-└── .gitignore
+├── .gitignore
+├── package.json
+└── README.md
