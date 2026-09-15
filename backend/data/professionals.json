@@ -1,1 +1,218 @@
-[]
+[
+  {
+    "id": 1,
+    "nome": "Dra. Mariana Costa",
+    "especialidade": "Cardiologia",
+    "crm": "CRM 12345",
+    "foto": "/images/professionals/mariana-costa.png",
+    "descricao": "Atendimento cardiológico com foco em prevenção, acompanhamento clínico e promoção da saúde cardiovascular.",
+    "disponibilidade": [
+      {
+        "data": "18/09/2026",
+        "horarios": ["08:00", "09:30", "11:00"]
+      },
+      {
+        "data": "21/09/2026",
+        "horarios": ["14:00", "15:30", "17:00"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "Dr. Henrique Nogueira",
+    "especialidade": "Cardiologia",
+    "crm": "CRM 23451",
+    "foto": "/images/professionals/henrique-nogueira.png",
+    "descricao": "Cuidados cardiovasculares voltados à prevenção, diagnóstico e acompanhamento individualizado de cada paciente.",
+    "disponibilidade": [
+      {
+        "data": "19/09/2026",
+        "horarios": ["08:30", "10:00", "11:30"]
+      },
+      {
+        "data": "22/09/2026",
+        "horarios": ["13:30", "15:00", "16:30"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "Dr. Rafael Almeida",
+    "especialidade": "Clínica Geral",
+    "crm": "CRM 23456",
+    "foto": "/images/professionals/rafael-almeida.png",
+    "descricao": "Atendimento clínico completo com foco em prevenção, diagnóstico inicial e acompanhamento integral da saúde.",
+    "disponibilidade": [
+      {
+        "data": "18/09/2026",
+        "horarios": ["09:00", "10:30", "12:00"]
+      },
+      {
+        "data": "23/09/2026",
+        "horarios": ["14:30", "16:00", "17:30"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "Dra. Renata Vasconcelos",
+    "especialidade": "Clínica Geral",
+    "crm": "CRM 34561",
+    "foto": "/images/professionals/renata-vasconcelos.png",
+    "descricao": "Acompanhamento clínico humanizado para prevenção, avaliação de sintomas e promoção da qualidade de vida.",
+    "disponibilidade": [
+      {
+        "data": "20/09/2026",
+        "horarios": ["08:00", "09:30", "11:00"]
+      },
+      {
+        "data": "24/09/2026",
+        "horarios": ["13:00", "14:30", "16:00"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nome": "Camila Martins",
+    "especialidade": "Nutrição",
+    "crm": "CRN 34567",
+    "foto": "/images/professionals/camila-martins.png",
+    "descricao": "Orientação nutricional personalizada para equilíbrio alimentar, bem-estar e construção de hábitos mais saudáveis.",
+    "disponibilidade": [
+      {
+        "data": "19/09/2026",
+        "horarios": ["08:00", "10:00", "12:00"]
+      },
+      {
+        "data": "22/09/2026",
+        "horarios": ["14:00", "16:00", "18:00"]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nome": "André Lima",
+    "especialidade": "Nutrição",
+    "crm": "CRN 45672",
+    "foto": "/images/professionals/andre-lima.png",
+    "descricao": "Planejamento nutricional individualizado com foco em saúde, desempenho, rotina equilibrada e qualidade de vida.",
+    "disponibilidade": [
+      {
+        "data": "20/09/2026",
+        "horarios": ["09:00", "11:00", "13:00"]
+      },
+      {
+        "data": "25/09/2026",
+        "horarios": ["15:00", "16:30", "18:00"]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nome": "Dr. Lucas Ferreira",
+    "especialidade": "Dermatologia",
+    "crm": "CRM 45678",
+    "foto": "/images/professionals/lucas-ferreira.png",
+    "descricao": "Atendimento dermatológico voltado à prevenção, diagnóstico e cuidado da saúde da pele, cabelos e unhas.",
+    "disponibilidade": [
+      {
+        "data": "18/09/2026",
+        "horarios": ["08:30", "10:00", "11:30"]
+      },
+      {
+        "data": "23/09/2026",
+        "horarios": ["14:00", "15:30", "17:00"]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nome": "Dra. Helena Barros",
+    "especialidade": "Dermatologia",
+    "crm": "CRM 56781",
+    "foto": "/images/professionals/helena-barros.png",
+    "descricao": "Cuidados dermatológicos personalizados com atenção à prevenção, estética saudável e bem-estar do paciente.",
+    "disponibilidade": [
+      {
+        "data": "19/09/2026",
+        "horarios": ["09:00", "10:30", "12:00"]
+      },
+      {
+        "data": "24/09/2026",
+        "horarios": ["13:30", "15:00", "16:30"]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nome": "Dra. Beatriz Souza",
+    "especialidade": "Pediatria",
+    "crm": "CRM 56789",
+    "foto": "/images/professionals/beatriz-souza.png",
+    "descricao": "Acompanhamento pediátrico cuidadoso em todas as fases do desenvolvimento infantil, com atenção à prevenção e ao bem-estar.",
+    "disponibilidade": [
+      {
+        "data": "18/09/2026",
+        "horarios": ["08:00", "09:30", "11:00"]
+      },
+      {
+        "data": "22/09/2026",
+        "horarios": ["14:00", "15:30", "17:00"]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nome": "Dr. Felipe Monteiro",
+    "especialidade": "Pediatria",
+    "crm": "CRM 67891",
+    "foto": "/images/professionals/felipe-monteiro.png",
+    "descricao": "Cuidados pediátricos com foco em prevenção, acompanhamento e desenvolvimento saudável.",
+    "disponibilidade": [
+      {
+        "data": "20/09/2026",
+        "horarios": ["08:30", "10:00", "11:30"]
+      },
+      {
+        "data": "25/09/2026",
+        "horarios": ["13:30", "15:00", "16:30"]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nome": "Dr. Gabriel Rocha",
+    "especialidade": "Ortopedia",
+    "crm": "CRM 67890",
+    "foto": "/images/professionals/gabriel-rocha.png",
+    "descricao": "Avaliação e acompanhamento ortopédico para prevenção e tratamento de alterações do sistema musculoesquelético.",
+    "disponibilidade": [
+      {
+        "data": "19/09/2026",
+        "horarios": ["09:00", "10:30", "12:00"]
+      },
+      {
+        "data": "23/09/2026",
+        "horarios": ["14:30", "16:00", "17:30"]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nome": "Dra. Laura Mendes",
+    "especialidade": "Ortopedia",
+    "crm": "CRM 78902",
+    "foto": "/images/professionals/laura-mendes.png",
+    "descricao": "Atendimento ortopédico com atenção à mobilidade, prevenção de lesões e recuperação da qualidade de vida.",
+    "disponibilidade": [
+      {
+        "data": "20/09/2026",
+        "horarios": ["08:00", "09:30", "11:00"]
+      },
+      {
+        "data": "24/09/2026",
+        "horarios": ["14:00", "15:30", "17:00"]
+      }
+    ]
+  }
+]
