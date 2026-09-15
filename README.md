@@ -4,7 +4,7 @@ Projeto desenvolvido para a disciplina de Programação e Desenvolvimento Web do
 
 A proposta consiste em uma landing page responsiva para uma clínica de saúde fictícia, integrada a uma API REST própria para consulta de profissionais, especialidades e disponibilidade de atendimento.
 
-O projeto foi desenvolvido com foco em organização, responsividade, boa experiência visual e integração entre frontend e backend.
+O projeto foi desenvolvido com foco em organização, responsividade, boa experiência visual, integração entre frontend e backend e simplicidade arquitetural compatível com o escopo acadêmico.
 
 ---
 
