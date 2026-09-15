@@ -314,7 +314,7 @@ function App() {
                     </p>
 
                     <p className="mt-2 text-sm font-medium text-[#4A3428]">
-                      (21) 99999-9999
+                      Canal demonstrativo
                     </p>
                   </div>
 
@@ -340,22 +340,17 @@ function App() {
                 </div>
 
                 <div className="mt-8 border-t border-[#C6A86A]/20 pt-6">
-                  <a
-                    href="https://wa.me/5521999999999"
-                    target="_blank"
-                    rel="noreferrer"
+                  <button
+                    type="button"
+                    aria-label="WhatsApp demonstrativo"
+                    title="Canal demonstrativo"
                     className="
                       mx-auto flex w-fit
-                      cursor-pointer items-center justify-center gap-2
+                      cursor-default items-center justify-center gap-2
                       rounded-full
                       bg-[#4A3428]
                       px-8 py-3.5
                       text-sm font-semibold text-white
-                      transition-all duration-300
-                      hover:-translate-y-1
-                      hover:bg-[#C6A86A]
-                      hover:text-[#1F1B18]
-                      hover:shadow-[0_12px_30px_rgba(198,168,106,0.25)]
                     "
                   >
                     <svg
@@ -369,7 +364,7 @@ function App() {
                     </svg>
 
                     Entrar em contato
-                  </a>
+                  </button>
                 </div>
               </div>
 
