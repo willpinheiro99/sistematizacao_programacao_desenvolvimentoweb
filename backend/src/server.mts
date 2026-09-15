@@ -1,8 +1,6 @@
 import cors from 'cors'
 import express from 'express'
-import { readFile } from 'node:fs/promises'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
+import professionalsData from '../data/professionals.json' with { type: 'json' }
 
 interface Availability {
   data: string
@@ -21,21 +19,9 @@ interface Professional {
 
 const app = express()
 
-const filename = fileURLToPath(import.meta.url)
-const dirname = path.dirname(filename)
-
-const dataPath = path.join(
-  dirname,
-  '../data/professionals.json',
-)
-
 app.use(cors())
 
-async function getProfessionals(): Promise<Professional[]> {
-  const file = await readFile(dataPath, 'utf-8')
-
-  return JSON.parse(file) as Professional[]
-}
+const professionals = professionalsData as Professional[]
 
 app.get('/', (_req, res) => {
   res.json({
@@ -43,10 +29,8 @@ app.get('/', (_req, res) => {
   })
 })
 
-app.get('/api/profissionais', async (req, res) => {
+app.get('/api/profissionais', (req, res) => {
   try {
-    const professionals = await getProfessionals()
-
     const nome = String(req.query.nome ?? '')
       .trim()
       .toLowerCase()
@@ -80,10 +64,8 @@ app.get('/api/profissionais', async (req, res) => {
   }
 })
 
-app.get('/api/especialidades', async (_req, res) => {
+app.get('/api/especialidades', (_req, res) => {
   try {
-    const professionals = await getProfessionals()
-
     const specialties = [
       ...new Set(
         professionals.map(

@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "description": "API REST do projeto acadêmico Nit Med",
-  "main": "dist/server.js",
+  "main": "dist/server.mjs",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "tsx watch src/server.mts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.mjs"
   },
   "keywords": [],
   "author": "William Pinheiro",
