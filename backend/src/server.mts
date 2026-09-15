@@ -1,3 +1,4 @@
+import cors from 'cors'
 import express from 'express'
 import professionalsData from '../data/professionals.json' with { type: 'json' }
 
@@ -17,6 +18,17 @@ interface Professional {
 }
 
 const app = express()
+
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://nitmed.vercel.app',
+]
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+  }),
+)
 
 const professionals = professionalsData as Professional[]
 
@@ -66,8 +78,7 @@ app.get('/api/especialidades', (_req, res) => {
     const specialties = [
       ...new Set(
         professionals.map(
-          (professional) =>
-            professional.especialidade,
+          (professional) => professional.especialidade,
         ),
       ),
     ]
