@@ -20,7 +20,6 @@ interface Professional {
 }
 
 const app = express()
-const PORT = Number(process.env.PORT) || 3000
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -102,8 +101,4 @@ app.get('/api/especialidades', async (_req, res) => {
   }
 })
 
-app.listen(PORT, () => {
-  console.log(
-    `Nit Med API running on http://localhost:${PORT}`,
-  )
-})
+export default app
