@@ -20,7 +20,7 @@ interface Professional {
 }
 
 const app = express()
-const PORT = 3000
+const PORT = Number(process.env.PORT) || 3000
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)

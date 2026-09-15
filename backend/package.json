@@ -2,14 +2,15 @@
   "name": "backend",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
-  "main": "index.js",
+  "description": "API REST do projeto acadêmico Nit Med",
+  "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "William Pinheiro",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
